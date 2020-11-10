@@ -15,7 +15,12 @@ namespace Formulario.Controllers
         {
             return View();
         }
-        public IActionResult Producto()
+        [HttpPost]
+        public IActionResult Producto(string Nombre, int Precio, string Descripcion)
+        {
+            return RedirectToAction("ProductoConfirmacion");
+        }
+        public IActionResult ProductoConfirmacion()
         {
             return View();
         }
