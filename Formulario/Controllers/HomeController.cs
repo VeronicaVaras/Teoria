@@ -15,10 +15,18 @@ namespace Formulario.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Producto(string Nombre, int Precio, string Descripcion)
+        public IActionResult Producto()
         {
-            return RedirectToAction("ProductoConfirmacion");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Producto(Producto producto)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("ProductoConfirmacion");
+            }
+            return View(producto);
         }
         public IActionResult ProductoConfirmacion()
         {

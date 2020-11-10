@@ -1,18 +1,24 @@
+@model Producto
+
 <h1>FORMULARIO DE PRODUCTO</h1>
+
+<div asp-validation-summary="All"></div>
+
 <form action="" method="post">
     <div class="form-group">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" class="form-control">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control">
     </div>
     <div class="form-group">
-        <label>Precio:</label>
-        <input type="number" name="precio" id="">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control">
     </div>
     <div class="form-group">
-        <label>Descripción:</label>
-        <input type="text" name="descripcion" class="form-control">
+        <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
     </div>
-    <div>
+
+    <div class="form-group textcenter">
         <button class="btn btn-primary">Enviar</button>
     </div>
 </form>
