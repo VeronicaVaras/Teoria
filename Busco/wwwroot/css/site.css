@@ -1,15 +1,33 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body.b{
+  background-image: url(https://st2.depositphotos.com/7844818/10887/v/950/depositphotos_108871450-stock-illustration-light-blue-white-elephants-pattern.jpg);
+}
+
+.table-hover{
+  background-color:#ffffff;  
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
+.card-img-top{
+  text-align: center;
+  width: 190px;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
+}
+
+div.d{
+  text-align: center;
+  color: #4756df;
 }
 
 .btn-primary {

@@ -1,0 +1,73 @@
+@model IEnumerable<Busco.Models.Producto>
+
+
+<h2>Listado  de Productos</h2>
+
+<p>
+    <a asp-action="Create">Create</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+                <th scope="col">
+                    #
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.imagen)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.descripcion)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.precio)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.celular)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.lugar)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.usuario)
+                </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                <div class="card" style="width: 12rem;">
+                    <img src="@item.imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lugar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario)
+            </td>
+        </tr>
+    }        
+    </tbody>    
+</table>
